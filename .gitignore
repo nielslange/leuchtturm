@@ -1,0 +1,13 @@
+# Node / Composer dependencies
+node_modules/
+vendor/
+
+# PHPLint
+.phplint.cache
+
+# OS / Editor metadata
+.DS_Store
+
+# Build artifacts
+/style.css.map
+*.zip

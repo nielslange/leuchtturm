@@ -1,0 +1,32 @@
+{
+  "name": "leuchtturm",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@wordpress/prettier-config": "^4.26.0",
+    "@wordpress/stylelint-config": "^23.18.0",
+    "autoprefixer": "^10.4.0",
+    "bootstrap": "^5.3.7",
+    "eslint": "^9.29.0",
+    "normalize-scss": "^8.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.0",
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.6.0",
+    "sass": "^1.89.2",
+    "stylelint": "^16.21.0",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-prettier": "^5.0.3",
+    "stylelint-scss": "^6.12.1"
+  },
+  "scripts": {
+    "build": "sass --style=compressed --load-path=node_modules/normalize-scss/sass/ assets/scss:.",
+    "phpcbf": "composer run phpcbf",
+    "phpcs": "composer run phpcs",
+    "phplint": "composer run phplint",
+    "lint:css": "stylelint '**/*.css'",
+    "lint:js": "eslint assets/js/",
+    "format": "prettier --write .",
+    "watch": "npm run build && npm run build -- --watch"
+  }
+}
