@@ -15,7 +15,7 @@ body.admin-bar {
 
 #site-header {
 	background-color: var(--secondary-background);
-	position: fixed;
+	position: static;
 	width: 100%;
 	z-index: 1000;
 
@@ -43,6 +43,11 @@ body.admin-bar {
 			a,
 			.site-description {
 				display: inline;
+			}
+
+			.site-description {
+				display: inline;
+				font-weight: 200;
 			}
 
 			a {

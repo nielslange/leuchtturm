@@ -18,7 +18,7 @@ main {
 	flex: 1 0 auto;
 
 	section {
-		padding: 20px;
+		padding: 40px 20px;
 
 		&:nth-child(even) {
 			background-color: var(--primary-background-even);

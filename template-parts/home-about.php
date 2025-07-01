@@ -1,26 +1,36 @@
 <?php
 /**
- * Template part for displaying the about section
+ * Template part for displaying the about section on the home page.
  *
- * @package Bugils@since 1.0.0
+ * @package Leuchtturm
+ * @since 1.0.0
  */
 
 ?>
 
 <section id="about">
 
-	<h2 class="heading">About</h2>
-
 	<div class="container">
 
+		<h2 class="heading">About</h2>
+
 		<div class="grid grid--2-cols">
+
 			<div class="grid__item">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<p>
+					I’m Niels, a WordPress and WooCommerce engineer with a passion for building thoughtful, effective solutions. With years of experience, including working at <a href="https://automattic.com/" target="_blank">Automattic</a>, the company behind <a href="https://wordpress.com/" target="_blank">WordPress.com</a> and <a href="https://woocommerce.com/" target="_blank">WooCommerce</a>, I believe in clear communication, quality code, and helping you achieve your vision. Let’s get to know each other.
+				</p>
+				<p>
+					<a href="<?php echo home_url(); ?>/about" class="button">More about me</a>
+				</p>
 			</div>
 
 			<div class="grid__item">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/thom-holmes-k-xKzowQRn8-unsplash.jpg" alt="" style="width: 100%; height: auto;">
 			</div>
+
+		</div>
+
 	</div>
 
 </section>

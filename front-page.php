@@ -11,9 +11,9 @@ get_header();
 echo '<main>';
 
 get_template_part( 'template-parts/home-about' );
-get_template_part( 'template-parts/home-happenings' );
-get_template_part( 'template-parts/home-menu' );
-get_template_part( 'template-parts/home-gallery' );
+get_template_part( 'template-parts/home-services' );
+// get_template_part( 'template-parts/home-cases' );
+get_template_part( 'template-parts/home-plugins' );
 
 echo '</main>';
 
