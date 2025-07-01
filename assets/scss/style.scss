@@ -1,0 +1,37 @@
+/*!
+Theme Name: Leuchtturm
+Theme URI: https://github.com/nielslange/leuchtturm
+Author: Niels Lange
+Author URI: https://nielslange.de
+Description: A simple, clean and responsive custom WordPress theme.
+Version: 1.0.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: leuchtturm
+*/
+
+// -----------------------------------------------------------------------------
+// Base: Global styles for reset, typography, and other base elements
+// -----------------------------------------------------------------------------
+@use "base/base";
+@use "base/normalize";
+@use "base/typography";
+
+// -----------------------------------------------------------------------------
+// Components: Reusable UI components such as buttons, forms, and navigation
+// -----------------------------------------------------------------------------
+@use "components/button";
+@use "components/grid";
+@use "components/spacing";
+@use "components/table";
+
+// -----------------------------------------------------------------------------
+// Layout: Styles for the main layout components like header and footer
+// -----------------------------------------------------------------------------
+@use "layout/header";
+@use "layout/footer";
+@use "layout/main";
+
+// -----------------------------------------------------------------------------
+// Pages: Page-specific styles
+// -----------------------------------------------------------------------------

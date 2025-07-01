@@ -1,0 +1,23 @@
+@use "../abstracts/variables";
+
+main {
+	background-color: var(--primary-background);
+	.main-inner {
+		display: flex;
+		flex-direction: column;
+		padding: 50px 20px;
+		margin: auto;
+		max-width: variables.$container-width;
+
+		@media screen and (min-width: variables.$breakpoint-tablet) {
+			padding: 100px 20px;
+		}
+
+		.main-content {
+			.entry-header {
+				margin-bottom: 30px;
+				text-align: center;
+			}
+		}
+	}
+}

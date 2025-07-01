@@ -1,0 +1,238 @@
+@use "../abstracts/variables";
+
+// Admin bar handling
+:root {
+	--admin-bar-height: 0px;
+}
+
+body.admin-bar {
+	--admin-bar-height: 32px;
+
+	@media screen and (max-width: 782px) {
+		--admin-bar-height: 46px;
+	}
+}
+
+#site-header {
+	background-color: var(--secondary-background);
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+
+	@media screen and (max-width: variables.$breakpoint-tablet) {
+		position: sticky;
+		top: var(--admin-bar-height);
+		width: 100%;
+	}
+
+	.header-inner {
+		color: var(--secondary-text);
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+		max-width: variables.$container-width;
+		padding: 0 variables.$container-padding;
+		height: 60px;
+	}
+
+	.site-branding {
+		.site-title {
+			margin: 0;
+
+			a,
+			.site-description {
+				display: inline;
+			}
+
+			a {
+				border: none;
+				color: var(--secondary-text);
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			.site-description {
+				margin: 0 0 0 1rem;
+				font-size: 0.9rem;
+
+				@media screen and (max-width: variables.$breakpoint-mobile) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.hamburger-menu,
+	#menu-toggle {
+		cursor: pointer;
+		fill: var(--secondary-text);
+		height: 24px;
+		width: 24px;
+		transition: background-image 0.3s ease-in-out;
+		background: none;
+		border: none;
+		padding: 0;
+		color: var(--secondary-text);
+
+		.menu-icon {
+			fill: currentColor;
+		}
+	}
+
+	#header-menu {
+		display: none;
+	}
+
+	.mobile-menu,
+	#menu-panel {
+		display: none;
+
+		&.open {
+			background-color: var(--secondary-background);
+			display: block;
+			left: 0;
+			padding: 20px 0;
+			position: fixed;
+			right: 0;
+			top: calc(60px + var(--admin-bar-height));
+			height: calc(100vh - 60px - var(--admin-bar-height));
+			z-index: 2;
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 70px 0 0;
+
+				li {
+					margin: 0;
+					padding: 0 0 20px;
+					text-align: center;
+
+					a {
+						border: none;
+						display: block;
+						padding: 10px 20px;
+						text-decoration: none;
+						color: var(--secondary-text);
+						font-size: 2rem;
+						font-family: "Fjalla One", sans-serif;
+					}
+
+					li a {
+						padding-left: 40px;
+					}
+
+					&.menu-item-button a {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: variables.$breakpoint-tablet) {
+	#site-header .header-inner {
+		.hamburger-menu,
+		#menu-toggle {
+			display: none;
+		}
+
+		#header-menu {
+			display: block;
+
+			ul {
+				display: flex;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					margin: 0;
+					padding: 0;
+					position: relative;
+
+					a {
+						color: var(--secondary-text);
+						text-decoration: none;
+						border: none;
+						display: block;
+						padding: 20px 10px;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+
+					&.menu-item-button a {
+						display: flex;
+						align-items: center;
+					}
+
+					&.menu-item-has-children {
+						> a::after {
+							content: "";
+							display: inline-block;
+							background: url("assets/images/chevron-down-solid.svg") no-repeat;
+							fill: var(--secondary-text);
+							margin-left: 10px;
+							height: 12px;
+							width: 12px;
+						}
+
+						&:hover {
+							ul {
+								display: block;
+							}
+						}
+					}
+
+					ul {
+						background-color: var(--secondary-text);
+						display: none;
+						min-width: 300px;
+						position: absolute;
+						z-index: 1;
+						border: 1px solid var(--secondary-text);
+						border-top: none;
+						border-bottom-left-radius: 5px;
+						border-bottom-right-radius: 5px;
+						z-index: 3;
+
+						li {
+							border-bottom: 1px solid var(--primary-text);
+
+							&:hover {
+								background-color: var(--primary-text);
+								a {
+									color: var(--primary-text);
+								}
+							}
+
+							&:last-child {
+								border-bottom: none;
+							}
+
+							a {
+								color: var(--primary-text);
+								display: block;
+								padding: 10px 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.mobile-menu,
+		#menu-panel {
+			display: none;
+		}
+	}
+}

@@ -1,28 +1,21 @@
 <?php
 /**
- * Leuchtturm theme functions.
+ * Theme functions and definitions
+ *
+ * This file contains the main theme setup, functions, and customizations.
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package Leuchtturm
+ * @since 1.0
+ * @author Niels Lange
+ * @license GPL v2 or later
  */
 
-declare( strict_types = 1 );
-defined( 'ABSPATH' ) || exit;
-
-define( 'LEUCHTTURM_VERSION', '1.0.0' );
-define( 'LEUCHTTURM_TEMPLATE_DIR', get_template_directory() );
-define( 'LEUCHTTURM_TEMPLATE_URI', get_template_directory_uri() );
-
-$inc_files = array(
-	'acf',
-	'enqueue',
-	'menus',
-	'pll',
-	'setup',
-);
-
-foreach ( $inc_files as $file ) {
-	$file_path = LEUCHTTURM_TEMPLATE_DIR . "/inc/{$file}.php";
-	if ( file_exists( $file_path ) ) {
-		require_once $file_path;
-	}
-}
+// Load required files.
+require_once get_template_directory() . '/inc/acf.php';
+require_once get_template_directory() . '/inc/colors.php';
+require_once get_template_directory() . '/inc/editor.php';
+require_once get_template_directory() . '/inc/enqueue.php';
+require_once get_template_directory() . '/inc/image-sizes.php';
+require_once get_template_directory() . '/inc/theme-setup.php';

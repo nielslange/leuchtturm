@@ -1,0 +1,46 @@
+@use "../abstracts/variables";
+
+.wp-block-button__link {
+	height: auto;
+	width: auto;
+}
+
+.button {
+	color: var(--secondary-text);
+	background-color: var(--secondary-background);
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	text-decoration: none;
+
+	&:hover {
+		background-color: var(--tertiary-background);
+	}
+}
+
+#whatsapp {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1;
+	line-height: 0;
+	padding: 15px;
+	border-radius: 50%;
+	background-color: #25d366;
+
+	img {
+		height: 24px;
+		width: 24px;
+	}
+}
+
+.menu-buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+
+	@media screen and (min-width: variables.$breakpoint-tablet) {
+		flex-direction: row;
+		justify-content: center;
+	}
+}

@@ -10,7 +10,7 @@
  * @package Leuchtturm
  * @since 1.0
  * @author Niels Lange
- * @license GPL v3 or later
+ * @license GPL v2 or later
  */
 
 ?><!DOCTYPE html>

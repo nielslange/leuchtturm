@@ -1,11 +1,13 @@
 <?php
 /**
- * ACF functionality
+ * ACF compatibility check and configuration
+ *
+ * This file handles the Advanced Custom Fields (ACF) compatibility check
+ * and configuration for the Leuchtturm theme. It ensures ACF is active and
+ * sets up the JSON save location for ACF field groups.
  *
  * @package Leuchtturm
- * @since 1.0
- * @author Niels Lange
- * @license GPL v3 or later
+ * @since 1.0.0
  */
 
 declare( strict_types=1 );
@@ -29,12 +31,12 @@ if ( ! class_exists( 'ACF' ) ) {
 add_action(
 	'after_setup_theme',
 	function () {
-		add_filter( 'acf/settings/save_json', 'bugils_save_json' );
-		add_filter( 'acf/settings/load_json', 'bugils_load_json' );
+		add_filter( 'acf/settings/save_json', 'leuchtturm_save_json' );
+		add_filter( 'acf/settings/load_json', 'leuchtturm_load_json' );
 	}
 );
 
-if ( ! function_exists( 'bugils_save_json' ) ) {
+if ( ! function_exists( 'leuchtturm_save_json' ) ) {
 	/**
 	 * Set the ACF JSON save location
 	 *
@@ -45,12 +47,12 @@ if ( ! function_exists( 'bugils_save_json' ) ) {
 	 * @since 1.0.0
 	 * @return string The path to the ACF JSON save directory
 	 */
-	function bugils_save_json(): string {
+	function leuchtturm_save_json(): string {
 		return get_stylesheet_directory() . '/inc/acf-json';
 	}
 }
 
-if ( ! function_exists( 'bugils_load_json' ) ) {
+if ( ! function_exists( 'leuchtturm_load_json' ) ) {
 	/**
 	 * Set the ACF JSON load location
 	 *
@@ -61,7 +63,7 @@ if ( ! function_exists( 'bugils_load_json' ) ) {
 	 * @since 1.0.0
 	 * @return array The paths to the ACF JSON load directories
 	 */
-	function bugils_load_json(): array {
+	function leuchtturm_load_json(): array {
 		return array( get_stylesheet_directory() . '/inc/acf-json' );
 	}
 }

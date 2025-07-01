@@ -1,0 +1,11 @@
+.wp-block-table.is-style-stripes {
+	border-bottom: none;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	tbody tr:nth-child(odd) {
+		background-color: color-mix(in srgb, currentColor 10%, transparent);
+	}
+}

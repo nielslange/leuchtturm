@@ -1,0 +1,45 @@
+@use "../abstracts/variables";
+
+.container {
+	padding: 1em;
+	max-width: variables.$container-width;
+	margin: 0 auto;
+}
+
+.grid {
+	display: grid;
+	gap: 2rem;
+	clear: both;
+
+	&--gap-sm {
+		gap: 10px;
+	}
+
+	&--2-cols {
+		grid-template-columns: 1fr;
+
+		@media screen and (min-width: variables.$breakpoint-tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&--4-cols {
+		grid-template-columns: 1fr;
+
+		@media screen and (min-width: variables.$breakpoint-mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media screen and (min-width: variables.$breakpoint-tablet) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	&--4-cols--flyer {
+		grid-template-columns: repeat(2, 1fr);
+
+		@media screen and (min-width: variables.$breakpoint-tablet) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+}

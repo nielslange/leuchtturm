@@ -1,16 +1,10 @@
 <?php
 /**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
+ * The template for displaying an individual page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Leuchtturm
- * @since 1.0
- * @author Niels Lange
- * @license GPL v3 or later
  */
 
 get_header();
@@ -19,9 +13,15 @@ get_header();
 <main>
 	<div class="main-inner">
 		<div class="main-content">
-			Hello World
+		<?php
+		while ( have_posts() ) {
+			the_post();
+			get_template_part( 'template-parts/page' );
+		}
+		?>
 		</div>
 	</div>
+	<?php get_template_part( 'template-parts/bar-links' ); ?>
 </main>
 
 <?php

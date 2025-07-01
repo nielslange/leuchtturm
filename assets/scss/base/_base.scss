@@ -1,0 +1,66 @@
+@use "../abstracts/variables";
+
+html {
+	font-size: 16px;
+}
+
+body {
+	line-height: 1.5;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	background-color: var(--primary-background-even);
+	color: var(--primary-text);
+}
+
+main {
+	flex: 1 0 auto;
+
+	section {
+		padding: 20px;
+
+		&:nth-child(even) {
+			background-color: var(--primary-background-even);
+		}
+
+		&:nth-child(odd) {
+			background-color: var(--primary-background-odd);
+		}
+	}
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 16px 0;
+}
+
+h1 {
+	margin: 0 0 100px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0 0 20px;
+}
+
+ul,
+ol {
+	margin: 1em 0;
+	padding-left: 1.5em;
+}
+
+li {
+	margin-bottom: 0.5em;
+}
+
+#site-footer {
+	flex-shrink: 0;
+}

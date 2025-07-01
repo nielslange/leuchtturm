@@ -1,0 +1,75 @@
+@use "../abstracts/variables";
+
+// Spacing Variables
+$spacing-unit: 1rem;
+$spacing-scale: (
+	0: 0,
+	1: $spacing-unit * 0.25,
+	// 0.25rem
+	2: $spacing-unit * 0.5,
+	// 0.5rem
+	3: $spacing-unit,
+	// 1rem
+	4: $spacing-unit * 1.5,
+	// 1.5rem
+	5: $spacing-unit * 2,
+	// 2rem
+	6: $spacing-unit * 3,
+	// 3rem
+	7: $spacing-unit * 4,
+	// 4rem
+	8: $spacing-unit * 5,
+	// 5rem
+);
+
+// Spacing Mixins
+@mixin generate-spacing($property, $prefix) {
+	@each $key, $value in $spacing-scale {
+		.#{$prefix}-#{$key} {
+			#{$property}: $value;
+		}
+
+		.#{$prefix}t-#{$key} {
+			#{$property}-top: $value;
+		}
+
+		.#{$prefix}r-#{$key} {
+			#{$property}-right: $value;
+		}
+
+		.#{$prefix}b-#{$key} {
+			#{$property}-bottom: $value;
+		}
+
+		.#{$prefix}l-#{$key} {
+			#{$property}-left: $value;
+		}
+
+		.#{$prefix}x-#{$key} {
+			#{$property}-left: $value;
+			#{$property}-right: $value;
+		}
+
+		.#{$prefix}y-#{$key} {
+			#{$property}-top: $value;
+			#{$property}-bottom: $value;
+		}
+	}
+}
+
+// Generate Margin Classes
+@include generate-spacing(margin, "m");
+
+// Generate Padding Classes
+@include generate-spacing(padding, "p");
+
+// Responsive Spacing
+@media (min-width: variables.$breakpoint-mobile) {
+	@include generate-spacing(margin, "m-mobile");
+	@include generate-spacing(padding, "p-mobile");
+}
+
+@media (min-width: variables.$breakpoint-tablet) {
+	@include generate-spacing(margin, "m-tablet");
+	@include generate-spacing(padding, "p-tablet");
+}
