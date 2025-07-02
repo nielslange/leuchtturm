@@ -21,8 +21,8 @@ if ( ! function_exists( 'leuchtturm_enqueue_scripts' ) ) {
 		$theme   = wp_get_theme();
 		$version = $theme->get( 'Version' );
 
-		wp_enqueue_style( 'leuchtturm-style', get_stylesheet_uri(), array(), $version, 'all' );
-		wp_enqueue_script( 'leuchtturm-menu', get_template_directory_uri() . '/assets/js/menu.js', array(), $version, true );
+		wp_enqueue_style( 'leuchtturm-style', get_stylesheet_uri(), array(), time(), 'all' );
+		wp_enqueue_script( 'leuchtturm-menu', get_template_directory_uri() . '/assets/js/menu.js', array(), time(), true );
 	}
 	add_action( 'wp_enqueue_scripts', 'leuchtturm_enqueue_scripts' );
 }
