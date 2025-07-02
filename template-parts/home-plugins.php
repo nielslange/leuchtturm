@@ -21,12 +21,12 @@
 					Over the years, I've published several WordPress plugins on <a href="https://profiles.wordpress.org/nielslange/#content-plugins" target="_blank">WordPress.org</a>. When it comes to plugins, I follow the UNIX philosophy: <strong>One problem, one solution</strong>. Each of my plugins is designed to solve exactly one problem.
 				</p>
 				<p>
-					<a href="<?php echo home_url(); ?>/about" class="button">Explore my plugins</a>
+					<a href="<?php echo home_url(); ?>/plugins" class="button">Explore my plugins</a>
 				</p>
 			</div>
 
 			<div class="grid__item">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/justin-morgan-ZjX-z2Q5zrk-unsplash.jpg" alt="" style="width: 100%; height: auto;">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/justin-morgan-ZjX-z2Q5zrk-unsplash.jpg" alt="">
 			</div>
 
 		</div>
