@@ -10,7 +10,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	background-color: var(--primary-background-even);
+	background-color: var(--primary-background-odd);
 	color: var(--primary-text);
 }
 
@@ -59,6 +59,12 @@ ol {
 
 li {
 	margin-bottom: 0.5em;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 #site-footer {

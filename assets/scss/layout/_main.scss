@@ -1,7 +1,8 @@
 @use "../abstracts/variables";
 
 main {
-	background-color: var(--primary-background);
+	background-color: var(--primary-background-odd);
+
 	.main-inner {
 		display: flex;
 		flex-direction: column;

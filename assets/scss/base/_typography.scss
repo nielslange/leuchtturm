@@ -6,7 +6,21 @@ body {
 	color: var(--primary-text);
 	background-color: var(--primary-background);
 
+	li {
+		a {
+			color: var(--primary-text);
+			text-decoration: none;
+			border-bottom: 1px dotted;
+
+			&:hover {
+				border-bottom: 1px solid;
+			}
+		}
+	}
+
 	p {
+		line-height: 1.75;
+
 		a {
 			color: var(--primary-text);
 			text-decoration: none;
@@ -61,27 +75,17 @@ body {
 	}
 
 	.heading {
-		position: relative;
-		text-align: center;
+		display: grid;
+		grid-template-columns: 1fr max-content 1fr;
+		align-items: center;
+		gap: 1rem;
 		margin: 0 0 2rem;
-		padding: 0 2rem;
 
 		&:before,
 		&:after {
 			content: "";
-			position: absolute;
-			top: 50%;
-			width: calc(50% - 4rem);
 			height: 1px;
 			background-color: var(--primary-text);
-		}
-
-		&:before {
-			left: 0;
-		}
-
-		&:after {
-			right: 0;
 		}
 	}
 }
