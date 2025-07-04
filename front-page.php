@@ -8,13 +8,11 @@
 
 get_header();
 
-echo '<main>';
-
-get_template_part( 'template-parts/home-about' );
-get_template_part( 'template-parts/home-services' );
-// get_template_part( 'template-parts/home-cases' );
-get_template_part( 'template-parts/home-plugins' );
-
-echo '</main>';
+print( '<main>' );
+$sections = get_field( 'sections' );
+foreach ( $sections as $section ) {
+	get_template_part( 'template-parts/section', null, array( 'section' => $section ) );
+}
+print( '</main>' );
 
 get_footer();

@@ -1,5 +1,37 @@
 @use "../abstracts/variables";
 
+@font-face {
+	font-family: "Londrina Solid";
+	src: url(./assets/fonts/LondrinaSolid-Thin.ttf);
+	font-weight: 100;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "Londrina Solid";
+	src: url(./assets/fonts/LondrinaSolid-Light.ttf);
+	font-weight: 300;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "Londrina Solid";
+	src: url(./assets/fonts/LondrinaSolid-Regular.ttf);
+	font-weight: 400;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "Londrina Solid";
+	src: url(./assets/fonts/LondrinaSolid-Black.ttf);
+	font-weight: 900;
+	font-style: normal;
+	font-display: fallback;
+}
+
 body {
 	font-family: system-ui, sans-serif;
 	font-size: 1rem;
@@ -38,7 +70,9 @@ body {
 	h4,
 	h5,
 	h6 {
+		font-family: "Londrina Solid", sans-serif;
 		color: var(--primary-text);
+		letter-spacing: 0.05em;
 	}
 
 	h1 {

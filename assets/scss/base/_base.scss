@@ -22,10 +22,22 @@ main {
 
 		&:nth-child(even) {
 			background-color: var(--primary-background-even);
+
+			.grid {
+				direction: rtl;
+
+				.grid__item {
+					direction: ltr;
+				}
+			}
 		}
 
 		&:nth-child(odd) {
 			background-color: var(--primary-background-odd);
+
+			.grid {
+				direction: ltr;
+			}
 		}
 	}
 }
