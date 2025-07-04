@@ -50,4 +50,28 @@
 			grid-template-columns: repeat(4, 1fr);
 		}
 	}
+
+	@media screen and (min-width: variables.$breakpoint-tablet) {
+		section:nth-child(even) & {
+			.grid__item {
+				&:nth-child(1) {
+					order: 2;
+				}
+				&:nth-child(2) {
+					order: 1;
+				}
+			}
+		}
+
+		section:nth-child(odd) & {
+			.grid__item {
+				&:nth-child(1) {
+					order: 1;
+				}
+				&:nth-child(2) {
+					order: 2;
+				}
+			}
+		}
+	}
 }
