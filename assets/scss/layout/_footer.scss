@@ -9,35 +9,6 @@
 	position: relative;
 }
 
-.partner-section {
-	background-color: var(--tertiary-background);
-	padding: 50px 20px;
-	text-align: center;
-
-	&__title {
-		color: var(--secondary-text);
-		margin-bottom: 2rem;
-	}
-
-	&__grid {
-		display: grid;
-		grid-template-columns: repeat(2, auto);
-		justify-content: center;
-		align-items: center;
-		gap: 1rem;
-
-		@media screen and (min-width: variables.$breakpoint-tablet) {
-			grid-template-columns: repeat(4, auto);
-		}
-	}
-
-	&__logo {
-		width: 150px;
-		object-fit: contain;
-		display: block;
-	}
-}
-
 .footer-content {
 	color: var(--secondary-text);
 	font-size: 15px;

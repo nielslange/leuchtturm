@@ -162,23 +162,10 @@
     "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "permalink",
-        "the_content",
-        "excerpt",
-        "discussion",
-        "comments",
-        "revisions",
-        "slug",
-        "author",
-        "format",
-        "page_attributes",
-        "featured_image",
-        "categories",
-        "tags",
-        "send-trackbacks"
+        "the_content"
     ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751609412
+    "modified": 1751634556
 }

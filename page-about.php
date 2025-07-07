@@ -11,12 +11,31 @@ get_header();
 ?>
 
 <main>
-		<?php
-		while ( have_posts() ) {
-			the_post();
-			get_template_part( 'template-parts/page-about' );
+
+<?php
+if ( have_rows( 'sections' ) ) {
+	while ( have_rows( 'sections' ) ) {
+		the_row();
+
+		if ( 'about' === get_row_layout() ) {
+			get_template_part( 'template-parts/about_about' );
 		}
-		?>
+
+		if ( 'contributions' === get_row_layout() ) {
+			get_template_part( 'template-parts/about_contributions' );
+		}
+
+		if ( 'wordcamps' === get_row_layout() ) {
+			get_template_part( 'template-parts/about_wordcamps' );
+		}
+
+		if ( 'meetups' === get_row_layout() ) {
+			get_template_part( 'template-parts/about_meetups' );
+		}
+	}
+}
+?>
+
 </main>
 
 <?php

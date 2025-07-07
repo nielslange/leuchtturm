@@ -6,14 +6,30 @@
 	margin: 0 auto;
 }
 
+.badges-grid {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+@media screen and (min-width: variables.$breakpoint-mobile) {
+	.badges-grid {
+		column-count: 2;
+		column-gap: 2rem;
+	}
+}
+
+@media screen and (min-width: variables.$breakpoint-tablet) {
+	.badges-grid {
+		column-count: 3;
+		column-gap: 2rem;
+	}
+}
+
 .grid {
 	display: grid;
 	gap: 2rem;
 	clear: both;
-
-	&--gap-sm {
-		gap: 10px;
-	}
 
 	&--2-cols {
 		grid-template-columns: 1fr;
@@ -37,14 +53,6 @@
 		@media screen and (min-width: variables.$breakpoint-mobile) {
 			grid-template-columns: repeat(2, 1fr);
 		}
-
-		@media screen and (min-width: variables.$breakpoint-tablet) {
-			grid-template-columns: repeat(4, 1fr);
-		}
-	}
-
-	&--4-cols--flyer {
-		grid-template-columns: repeat(2, 1fr);
 
 		@media screen and (min-width: variables.$breakpoint-tablet) {
 			grid-template-columns: repeat(4, 1fr);
