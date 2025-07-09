@@ -31,6 +31,22 @@
 	gap: 2rem;
 	clear: both;
 
+	&--narrow {
+		gap: 0;
+
+		@media screen and (min-width: variables.$breakpoint-tablet) {
+			gap: 0.5rem;
+		}
+	}
+
+	&--plugin-buttons {
+		grid-template-columns: 1fr;
+
+		@media screen and (min-width: variables.$breakpoint-tablet) {
+			grid-template-columns: 3fr 2fr !important;
+		}
+	}
+
 	&--2-cols {
 		grid-template-columns: 1fr;
 
@@ -60,7 +76,7 @@
 	}
 
 	@media screen and (min-width: variables.$breakpoint-tablet) {
-		section:nth-child(even) & {
+		section:nth-child(even) &:not(.grid--no-alternate) {
 			.grid__item {
 				&:nth-child(1) {
 					order: 2;
@@ -71,7 +87,7 @@
 			}
 		}
 
-		section:nth-child(odd) & {
+		section:nth-child(odd) &:not(.grid--no-alternate) {
 			.grid__item {
 				&:nth-child(1) {
 					order: 1;

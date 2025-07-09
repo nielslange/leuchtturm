@@ -122,4 +122,16 @@ body {
 			background-color: var(--primary-text);
 		}
 	}
+
+	.highlight {
+		background-color: var(--primary-text);
+		color: var(--primary-background-odd);
+		text-align: center;
+		padding: 1rem 2rem;
+		border-radius: 0.5rem;
+
+		strong {
+			color: var(--secondary-text);
+		}
+	}
 }

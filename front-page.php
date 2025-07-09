@@ -9,9 +9,8 @@
 get_header();
 
 print( '<main>' );
-$sections = get_field( 'sections' );
-foreach ( $sections as $section ) {
-	get_template_part( 'template-parts/section', null, array( 'section' => $section ) );
+foreach ( get_field( 'sections' ) as $section ) {
+	get_template_part( 'template-parts/home_section', null, array( 'section' => $section ) );
 }
 print( '</main>' );
 

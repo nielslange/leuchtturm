@@ -4,6 +4,7 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	width: 100%;
 
 	tbody tr:nth-child(odd) {
 		background-color: color-mix(in srgb, currentColor 10%, transparent);

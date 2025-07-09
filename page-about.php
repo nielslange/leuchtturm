@@ -17,20 +17,19 @@ if ( have_rows( 'sections' ) ) {
 	while ( have_rows( 'sections' ) ) {
 		the_row();
 
-		if ( 'about' === get_row_layout() ) {
-			get_template_part( 'template-parts/about_about' );
-		}
-
-		if ( 'contributions' === get_row_layout() ) {
-			get_template_part( 'template-parts/about_contributions' );
-		}
-
-		if ( 'wordcamps' === get_row_layout() ) {
-			get_template_part( 'template-parts/about_wordcamps' );
-		}
-
-		if ( 'meetups' === get_row_layout() ) {
-			get_template_part( 'template-parts/about_meetups' );
+		switch ( get_row_layout() ) {
+			case 'about':
+				get_template_part( 'template-parts/about_about' );
+				break;
+			case 'contributions':
+				get_template_part( 'template-parts/about_contributions' );
+				break;
+			case 'wordcamps':
+				get_template_part( 'template-parts/about_wordcamps' );
+				break;
+			case 'meetups':
+				get_template_part( 'template-parts/about_meetups' );
+				break;
 		}
 	}
 }

@@ -11,12 +11,25 @@ get_header();
 ?>
 
 <main>
-		<?php
-		while ( have_posts() ) {
-			the_post();
-			get_template_part( 'template-parts/page-plugins' );
+
+<?php
+
+if ( have_rows( 'sections' ) ) {
+	while ( have_rows( 'sections' ) ) {
+		the_row();
+
+		switch ( get_row_layout() ) {
+			case 'about':
+				get_template_part( 'template-parts/plugins_about' );
+				break;
+			case 'plugins':
+				get_template_part( 'template-parts/plugins_plugins' );
+				break;
 		}
-		?>
+	}
+}
+?>
+
 </main>
 
 <?php

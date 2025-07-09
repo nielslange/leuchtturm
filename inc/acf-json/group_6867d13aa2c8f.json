@@ -30,7 +30,7 @@
                             "aria-label": "",
                             "type": "text",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -51,7 +51,7 @@
                             "aria-label": "",
                             "type": "wysiwyg",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -72,7 +72,7 @@
                             "aria-label": "",
                             "type": "image",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -140,7 +140,7 @@
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Add contribution",
+                            "button_label": "Add Row",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -150,7 +150,7 @@
                                     "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
-                                    "required": 0,
+                                    "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
@@ -172,7 +172,7 @@
                                     "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
-                                    "required": 0,
+                                    "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
@@ -415,5 +415,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751879255
+    "modified": 1751974087
 }

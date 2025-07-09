@@ -7,7 +7,7 @@
 
 ?>
 
-<section id="plugins">
+<section>
 
 	<div class="container">
 

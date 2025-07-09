@@ -166,6 +166,10 @@ body.admin-bar {
 					padding: 0;
 					position: relative;
 
+					&.current-menu-item a {
+						text-decoration: underline;
+					}
+
 					a {
 						color: var(--secondary-text);
 						text-decoration: none;
