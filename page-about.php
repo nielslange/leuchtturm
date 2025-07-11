@@ -21,6 +21,9 @@ if ( have_rows( 'sections' ) ) {
 			case 'about':
 				get_template_part( 'template-parts/about_about' );
 				break;
+			case 'skills':
+				get_template_part( 'template-parts/about_skills' );
+				break;
 			case 'contributions':
 				get_template_part( 'template-parts/about_contributions' );
 				break;

@@ -1,7 +1,12 @@
 document.addEventListener( 'DOMContentLoaded', () => {
 	const API_URL =
 		'https://api.wordpress.org/plugins/info/1.2/?action=query_plugins&request[fields][banners]=true&request[search]="Niels Lange"';
+
 	const placeholder = document.querySelector( '#plugins_stats' );
+	// If the placeholder is not found, return early.
+	if ( ! placeholder ) {
+		return;
+	}
 
 	const formatNumber = ( number ) => new Intl.NumberFormat( 'en-US' ).format( number );
 
